@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    margin: 0px;
+}
+
+
+
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 40px;
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    nav {
+        background-color: rgba(111, 111, 243, 0.145);
+        padding: 30px 50px;
+        backdrop-filter: blur(3px);
+        width: 50%;
+
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+
+            li {
+                span {
+                    color: white;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: rgb(231, 205, 156);
+                }
+                a:hover {
+                    border-bottom: solid 5px white;
+                    padding: 20px;
+                }
+
+                transition: 0.5s;
+
+            }
+         
+        }
+    }
+
+    nav.mynav-active {
+        border-bottom: 3px solid white;
+    }
+
+   button.burger {
+    display: none;
+    img {
+        width: 30px;
+        height: 20px;
+    }
+   }
+}
+
+
+button.burger {
+    padding: 0px;
+    border: 0px;
+    display: none;
+    transition: all 0.3s ease;
+    background-color: #262626;
+
+    @media screen and (max-width: 940px) {
+        display: block !important;
+    }
+
+    &.open {
+        transform: translateX(-200px);
+    }
+}
+  
+header nav {
+    @media screen and (max-width: 940px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        max-width: 0px;
+        right: 0px;
+        top: 0px;
+        background-color: #262626;
+        height: 100vh;
+        gap: 10px;
+        z-index: 99;
+        transition: all 0.5s ease-in-out;
+        display: none;
+
+        ul {
+            flex-direction: column;
+            gap: 40px;
+            li a {
+                text-align: center;
+            }
+        }
+
+        &.open {
+            padding: 20px;
+            padding-top: 80px;
+            max-width: 200px;
+            display: block;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    body {
+          
+        nav {
+            ul {
+                li{
+                   span {
+                       display: none;
+                   }
+                }
+            }
+        }
+    }
+}

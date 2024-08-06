@@ -1,0 +1,110 @@
+body {
+    background-image: url(../starter-code/assets/crew/background-crew-desktop.jpg);
+    background-size: cover;
+}
+
+.container {
+    padding: 150px;
+    
+
+    .crew-row {
+        display: flex;
+        justify-content: space-between;
+
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+
+            h5 {
+                    font-size: 20px;
+                    transform: scaleY(1.5);
+                    letter-spacing: 10px;
+                    color: white;
+                    font-weight: 100;
+                    margin-bottom: 120px;
+            }
+
+            .crew-contant {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+
+                h6#profession {
+                    font-size: 28px;
+                    color: rgb(158, 158, 158);
+                    font-weight: 200;
+                }
+    
+                h4#name {
+                    font-size: 30px;
+                    color: white;
+                    transform: scaleY(1.5);
+                    font-weight: 100;
+                    letter-spacing: 10px;
+                }
+    
+                p#biography {
+                    font-size: 20px;
+                    color: #d0d6f9;
+                    max-width: 500px;
+                    line-height: 1.5;
+                }
+            }
+
+            .crew-nav {
+                display: flex;
+                gap: 20px;
+                
+
+                .nav-circles {
+                    background-color: #797a7f;
+                    transition: 0.5s;
+                    opacity: 100%;
+                    border-radius: 25px;
+                    width: 15px;
+                    height: 15px;
+                }
+                .nav-circles-active {
+                    background-color: white;
+                    opacity: 100%;
+                  }
+
+                  .nav-circles:hover {
+                    background-color: #d1cdcd;
+                    transition: 0.5s;
+                    opacity: 100%;
+                    cursor: pointer;
+                  }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    .container {
+       padding: 100px;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        padding: 70px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .crew-row {
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+        }
+    }
+}
